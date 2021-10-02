@@ -1,8 +1,8 @@
+import os
 from utils.file_reader import read_file
-from hashing.sha import hash_block
+from crypto.sha import hash_block
 
 def main():
-    file_lines = read_file("resources/FuncoesResumo - SHA1.mp4")
-    print(file_lines.__sizeof__())
-
+    dirname = os.path.dirname(__file__)
+    file_bytes = read_file(dirname +  "/" + "resources/FuncoesResumo - SHA1.mp4")
 main();

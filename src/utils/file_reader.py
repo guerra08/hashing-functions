@@ -1,4 +1,4 @@
 def read_file(file_name):
-    file = open(file_name, "rb")
-    return file.read()
-
+    with open(file_name, "rb") as f:
+        blist = list(bytearray(f.read()))
+        return blist
