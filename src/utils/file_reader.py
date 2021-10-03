@@ -1,4 +1,10 @@
 def read_file(file_name):
-    with open(file_name, "rb") as f:
-        blist = list(bytearray(f.read()))
-        return blist
+    f = open(file_name, "rb")
+    file_bytes = []
+    while True:
+        chunk = f.read(1024)
+        if not chunk:
+            break
+        file_bytes += [chunk]
+    f.close()
+    return file_bytes
