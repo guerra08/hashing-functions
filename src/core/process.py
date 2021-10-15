@@ -4,6 +4,14 @@ from crypto.sha import hash_block
 CHUNK_SIZE = 1024
 
 def process_file(file_name):
+    """Processes a file in blocks of 1024 bytes at a time and returns the H0 hash.
+
+    Parameters:
+        file_name: Name / path of the file
+
+    Returns
+        string: H0 hash
+    """
     file_size = os.path.getsize(file_name)
     current_chunk_size = file_size % CHUNK_SIZE
     with open(file_name, "rb") as file:
