@@ -1,3 +1,9 @@
+'''
+Hashing Functions - H0
+
+Author: Bruno Guerra
+'''
+
 import sys
 from core.process import process_file
 
